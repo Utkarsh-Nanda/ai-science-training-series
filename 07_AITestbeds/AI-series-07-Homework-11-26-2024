@@ -1,0 +1,22 @@
+Theory Homework Answers
+
+1)
+These AI accelerator systems integrate memory and compute on the same chip, unlike traditional von Neumann architectures where memory and compute are separated. 
+They use dataflow-based execution where operations are triggered by data availability rather than sequential program counters. 
+The systems contain thousands of processing elements with dedicated local memory, enabling massive parallelism for AI workloads.
+2)
+The key architectural differences between these AI accelerators lie in their unique processing approaches. 
+Cerebras WSE uses independent processing elements with local memory, enabling true dataflow execution where operations are triggered by data availability. 
+SambaNova's RDU employs a flexible dataflow architecture with a sophisticated multi-tiered memory system that efficiently handles large datasets. 
+Graphcore's IPU takes a different approach with its BSP model, where processing tiles alternate between computation and communication phases in synchronized steps. 
+Groq's TSP architecture stands apart by focusing on deterministic execution timing, making it particularly effective for low-latency inference tasks. 
+Each system's unique memory architecture and execution model creates distinct advantages for different AI workloads.
+3)
+The workflow involves first accessing the system through SSH to ALCF login nodes, creating a Python virtual environment, and installing system-specific dependencies. 
+For Cerebras, developers use CS-Torch (a PyTorch variant) and modify YAML configuration files to specify data paths and runtime parameters. 
+The code is then compiled and deployed using system-specific job schedulers like the Kubernetes-based system used by Cerebras.
+4)
+A large language model training project would significantly benefit from these accelerators. 
+The systems have shown up to 66x speedup compared to traditional GPUs for LLM inference tasks. 
+The massive parallelism and integrated memory architecture are good for handling the extensive matrix operations in transformer models,
+while the dataflow execution model efficiently manages the complex dependencies in neural network computations.
