@@ -13,7 +13,7 @@ Groq's TSP architecture stands apart by focusing on deterministic execution timi
 Each system's unique memory architecture and execution model creates distinct advantages for different AI workloads.
 3)
 The workflow involves first accessing the system through SSH to ALCF login nodes, creating a Python virtual environment, and installing system-specific dependencies. 
-For Cerebras, developers use CS-Torch (a PyTorch variant) and modify YAML configuration files to specify data paths and runtime parameters. 
+For Cerebras, developers we can use CS-Torch  and modify YAML configuration files to specify data paths and runtime parameters. 
 The code is then compiled and deployed using system-specific job schedulers like the Kubernetes-based system used by Cerebras.
 4)
 A large language model training project would significantly benefit from these accelerators. 
